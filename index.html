@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kadel Trade Link (KTL) — Home Appliances &amp; Electronics, Nepal</title>
+<meta name="description" content="Kadel Trade Link (KTL) — 100% authentic home appliances and consumer electronics. Air conditioners, washing machines, refrigerators, TVs and kitchen appliances from Kenstar, Havells Lloyd, Hisense, Voltas, Haier, IFB and more. Delivering all over Nepal since 2020.">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#162868;
+    --navy-dark:#0d1a47;
+    --black:#111214;
+    --gold:#c79a3e;
+    --orange:#f57224;
+    --bg:#f6f7fb;
+    --white:#ffffff;
+    --gray:#5c6170;
+    --line:#e6e8f0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  .icon{width:1em;height:1em;display:inline-block;vertical-align:middle;fill:none;flex-shrink:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins','Helvetica Neue',Arial,sans-serif;
+    color:var(--black);
+    background:var(--white);
+    line-height:1.6;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  section{padding:88px 0;}
+
+  /* SCROLL PROGRESS */
+  .scroll-progress{
+    position:fixed;top:0;left:0;height:3px;width:0%;
+    background:linear-gradient(90deg,var(--gold),#e8c877);
+    z-index:999;transition:width .1s linear;
+  }
+
+  /* FLOATING WHATSAPP */
+  .fab-wa{
+    position:fixed;right:22px;bottom:22px;z-index:900;
+    width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:28px;
+    box-shadow:0 10px 26px rgba(37,211,102,.45);
+    animation:pulse-wa 2.4s infinite;
+  }
+  @keyframes pulse-wa{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,.55);}
+    70%{box-shadow:0 0 0 16px rgba(37,211,102,0);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+  }
+
+  /* ANNOUNCEMENT BAR */
+  .announce{
+    background:var(--orange);color:#fff;text-align:center;font-weight:700;
+    font-size:13px;letter-spacing:.4px;padding:9px 14px;
+  }
+
+  /* HEADER */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);
+    backdrop-filter:blur(6px);
+  }
+  .head-social{display:flex;gap:10px;margin-right:18px;}
+  .head-social a{
+    width:34px;height:34px;border-radius:50%;background:var(--bg);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--navy);
+    transition:background .2s,color .2s;
+  }
+  .head-social a:hover{background:var(--navy);color:#fff;}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:8px 24px;max-width:1140px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;}
+  .brand img{height:84px;width:auto;}
+  .nav-links{display:flex;gap:28px;font-size:14.5px;font-weight:600;letter-spacing:.2px;}
+  .nav-links a{color:var(--navy-dark);opacity:.85;transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{
+    background:#25D366;color:var(--white);
+    padding:10px 18px;border-radius:4px;font-size:14px;font-weight:700;
+    white-space:nowrap;display:flex;align-items:center;gap:6px;
+  }
+  .nav-cta:hover{background:#1ebc5a;}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,#1f3584 100%);
+    color:var(--white);
+    padding:86px 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;
+    border-radius:50%;background:rgba(199,154,62,.12);pointer-events:none;
+  }
+  .hero .wrap{
+    display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;
+  }
+  .hero-inner{position:relative;z-index:2;}
+  .eyebrow{
+    display:inline-block;color:var(--gold);font-weight:700;letter-spacing:2px;
+    font-size:12.5px;text-transform:uppercase;margin-bottom:18px;
+    border:1px solid rgba(199,154,62,.5);padding:6px 14px;border-radius:30px;
+  }
+  .hero h1{font-size:42px;line-height:1.22;font-weight:800;margin-bottom:18px;}
+  .hero p.lead{font-size:17px;color:#d7dcf2;max-width:520px;margin-bottom:30px;}
+  .btn-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:4px;font-weight:700;font-size:15px;
+    transition:all .2s ease;
+  }
+  .btn-gold{background:var(--gold);color:var(--navy-dark);}
+  .btn-gold:hover{background:#d9ae55;}
+  .btn-outline{border:1.5px solid rgba(255,255,255,.55);color:var(--white);}
+  .btn-outline:hover{background:rgba(255,255,255,.1);}
+
+  .strip{background:var(--navy-dark);color:#cfd5ee;padding:16px 0;font-size:13.5px;border-top:3px solid var(--gold);}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:10px 34px;justify-content:center;text-align:center;font-weight:700;letter-spacing:.3px;}
+
+  /* FOOTER TRUST + MAP */
+  .trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:34px;}
+  .trust-item{
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:10px;
+    padding:16px;text-align:center;font-size:12.5px;font-weight:700;color:#d7dcf2;
+  }
+  .trust-item .em{font-size:22px;display:block;margin-bottom:6px;}
+  @media (max-width:700px){.trust-row{grid-template-columns:1fr 1fr;}}
+
+  /* SECTION HEADS */
+  .s-head{max-width:640px;margin:0 auto 54px;text-align:center;}
+  .s-tag{color:var(--gold);font-weight:700;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+  .s-head h2{font-size:32px;font-weight:800;color:var(--navy-dark);margin-bottom:14px;}
+  .s-head p{color:var(--gray);font-size:16px;}
+
+  /* ABOUT */
+  #about{background:var(--bg);}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .about-grid h2{font-size:30px;font-weight:800;color:var(--navy-dark);margin-bottom:18px;}
+  .about-grid p{color:var(--gray);margin-bottom:16px;font-size:16px;}
+  .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px;}
+  .stat{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:20px;}
+  .stat b{display:block;font-size:24px;color:var(--navy);font-weight:800;}
+  .stat span{font-size:13px;color:var(--gray);}
+  .about-panel{
+    background:var(--navy);color:var(--white);border-radius:12px;padding:40px;
+  }
+  .about-panel h3{font-size:20px;margin-bottom:18px;color:var(--gold);font-weight:700;}
+  .about-panel ul li{display:flex;gap:12px;margin-bottom:14px;font-size:15px;color:#e5e8f6;}
+  .about-panel ul li::before{content:"✓";color:var(--gold);font-weight:800;}
+
+  /* TRENDING CHIPS */
+  .chip-scroll{
+    display:flex;gap:12px;overflow-x:auto;padding-bottom:10px;margin-bottom:46px;
+    scrollbar-width:none;
+  }
+  .chip-scroll::-webkit-scrollbar{display:none;}
+  .trend-chip{
+    flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;
+    background:var(--white);border:1.5px solid var(--line);border-radius:30px;
+    padding:10px 20px 10px 16px;font-size:13.5px;font-weight:700;color:var(--navy-dark);white-space:nowrap;
+    transition:all .2s;
+  }
+  .trend-chip svg{color:var(--navy);transition:color .2s;}
+  .trend-chip:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .trend-chip:hover svg{color:#fff;}
+
+  /* CATEGORIES (product tiles) */
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .tile{
+    position:relative;border-radius:14px;padding:26px 24px 24px;overflow:hidden;
+    transition:transform .2s ease, box-shadow .2s ease;color:#fff;
+    min-height:200px;display:flex;flex-direction:column;
+  }
+  .tile:hover{transform:translateY(-5px);box-shadow:0 16px 32px rgba(15,25,70,.18);}
+  .tile-icon{
+    width:52px;height:52px;border-radius:12px;background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.25);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:18px;color:#fff;
+  }
+  .tile .badge{
+    position:absolute;top:20px;right:20px;background:rgba(255,255,255,.22);
+    color:#fff;font-size:10px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;
+    padding:5px 10px;border-radius:20px;backdrop-filter:blur(2px);
+  }
+  .tile h3{font-size:17px;font-weight:800;margin-bottom:8px;}
+  .tile p{color:rgba(255,255,255,.88);font-size:12.5px;margin-top:auto;}
+  .tile.t1{background:linear-gradient(145deg,#1f3584,var(--navy-dark));}
+  .tile.t2{background:linear-gradient(145deg,#2f7d6b,#1c5347);}
+  .tile.t3{background:linear-gradient(145deg,#b8752b,#8c5316);}
+  .tile.t4{background:linear-gradient(145deg,#7b3fae,#4d2470);}
+
+  /* legacy card (kept for other grids) */
+  .card{
+    background:var(--white);border:1px solid var(--line);border-radius:10px;padding:28px 22px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(15,25,70,.08);}
+  .card .icon{
+    width:46px;height:46px;border-radius:8px;background:var(--navy);color:var(--gold);
+    display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;
+  }
+  .card h3{font-size:16.5px;color:var(--navy-dark);margin-bottom:8px;font-weight:700;}
+  .card p{color:var(--gray);font-size:13.5px;}
+
+  /* BRANDS */
+  #brands{background:var(--bg);}
+  .brand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .brand-chip{
+    background:var(--white);border:1px solid var(--line);border-radius:10px;padding:22px 16px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+    min-height:110px;
+    transition:all .2s;
+  }
+  .brand-chip:hover{border-color:var(--gold);box-shadow:0 10px 24px rgba(15,25,70,.08);transform:translateY(-3px);}
+  .brand-chip img{max-width:100%;max-height:46px;width:auto;height:auto;object-fit:contain;}
+  .brand-chip .sub-label{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--gray);text-transform:uppercase;}
+
+  /* OFFERS GALLERY */
+  #offers{background:var(--bg);}
+  .offers-scroll{
+    display:flex;gap:20px;overflow-x:auto;padding:6px 6px 16px;
+    scroll-snap-type:x proximity;
+  }
+  .offer-card{
+    flex:0 0 auto;width:230px;scroll-snap-align:start;
+    background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+    box-shadow:0 6px 18px rgba(15,25,70,.06);transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .offer-card:hover{transform:translateY(-5px);box-shadow:0 16px 30px rgba(15,25,70,.14);}
+  .offer-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;}
+  .offer-card .offer-cta{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    padding:12px 10px;font-size:12.5px;font-weight:700;color:var(--navy-dark);
+    border-top:1px solid var(--line);
+  }
+  .offer-card .offer-cta svg{color:#25D366;}
+  .offer-card:hover .offer-cta{background:var(--navy);color:#fff;}
+  .offer-card:hover .offer-cta svg{color:#fff;}
+
+  /* HERO LOGO BADGE */
+  .hero-logo-badge{
+    position:relative;z-index:2;margin-left:auto;max-width:420px;
+    background:var(--white);border-radius:22px;padding:40px 32px;
+    box-shadow:0 24px 54px rgba(0,0,0,.28);
+  }
+  .hero-logo-badge img{
+    width:100%;height:auto;
+    display:block;
+  }
+  @media (max-width:980px){.hero-logo-badge{display:none;}}
+
+  /* LOCATIONS */
+  .loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .loc-chip{
+    background:var(--white);border:1px solid var(--line);border-radius:10px;padding:22px;
+    display:flex;align-items:center;gap:14px;font-weight:700;color:var(--navy-dark);font-size:15px;
+  }
+  .loc-chip .dot{width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+  .loc-chip small{display:block;font-weight:500;color:var(--gray);font-size:12.5px;margin-top:2px;}
+
+  /* WHY / SERVICES */
+  #why{background:var(--navy-dark);color:var(--white);}
+  #why .s-head h2{color:var(--white);}
+  #why .s-head p{color:#c6cbe6;}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .why-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:26px 20px;}
+  .why-item .num{
+    width:44px;height:44px;border-radius:50%;background:rgba(199,154,62,.15);border:2px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-weight:800;color:var(--gold);font-size:14px;
+  }
+  .why-item h4{font-size:16px;margin-bottom:8px;font-weight:700;}
+  .why-item p{font-size:13.5px;color:#c6cbe6;}
+
+  /* SHOP */
+  .shop-banner{
+    background:linear-gradient(135deg,#1f3584,var(--navy));
+    border-radius:14px;padding:42px;display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:24px;color:var(--white);
+  }
+  .shop-banner h3{font-size:22px;margin-bottom:8px;font-weight:800;}
+  .shop-banner p{color:#d7dcf2;font-size:14.5px;}
+
+  /* CONTACT */
+  #contact{background:var(--bg);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+  .contact-info h2{font-size:30px;font-weight:800;color:var(--navy-dark);margin-bottom:16px;}
+  .contact-info p{color:var(--gray);margin-bottom:28px;}
+  .info-row{display:flex;gap:16px;margin-bottom:20px;align-items:flex-start;}
+  .info-row .ic{
+    width:42px;height:42px;border-radius:8px;background:var(--white);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:800;flex-shrink:0;
+  }
+  .info-row b{display:block;color:var(--navy-dark);font-size:14.5px;}
+  .info-row span{color:var(--gray);font-size:14px;}
+  .info-row a.link{color:var(--navy);font-weight:700;}
+  .social-row{display:flex;gap:12px;margin-top:10px;}
+  .social-row a{
+    width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--white);
+    display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;
+  }
+  .social-row a.wa{background:#25D366;}
+
+  .contact-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:34px;}
+  .contact-card h3{font-size:19px;color:var(--navy-dark);margin-bottom:6px;font-weight:700;}
+  .contact-card p{color:var(--gray);font-size:14px;margin-bottom:22px;}
+  .cta-stack{display:flex;flex-direction:column;gap:14px;}
+  .cta-stack .btn{justify-content:center;width:100%;}
+  .btn-wa{background:#25D366;color:var(--white);}
+  .btn-wa:hover{background:#1ebc5a;}
+  .btn-navy{background:var(--navy);color:var(--white);}
+  .btn-navy:hover{background:var(--navy-dark);}
+  .btn-daraz{background:#f57224;color:var(--white);}
+  .btn-daraz:hover{background:#dd641a;}
+
+  /* FOOTER */
+  footer{background:var(--navy-dark);color:#aab1d4;padding:40px 0 24px;}
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+  .footer-brand{display:flex;align-items:center;gap:10px;color:var(--white);font-weight:700;}
+  .footer-brand img{height:60px;filter:brightness(0) invert(1);opacity:.9;}
+  footer .fnav{display:flex;gap:22px;font-size:13.5px;flex-wrap:wrap;}
+  .footer-bottom{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;text-align:center;}
+
+  @media (max-width:980px){
+    .hero .wrap{grid-template-columns:1fr;}
+  }
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .hero h1{font-size:30px;}
+    .about-grid,.contact-grid{grid-template-columns:1fr;}
+    .grid-4{grid-template-columns:1fr 1fr;}
+    .brand-grid{grid-template-columns:1fr 1fr;}
+    .loc-grid{grid-template-columns:1fr 1fr;}
+    .why-grid{grid-template-columns:1fr 1fr;}
+    section{padding:60px 0;}
+  }
+  @media (max-width:640px){
+    .nav{padding:8px 16px;flex-wrap:nowrap;}
+    .brand img{height:52px;}
+    .head-social{gap:6px;margin-right:10px;}
+    .head-social a{width:30px;height:30px;}
+    .nav-cta{padding:10px;}
+    .nav-cta .cta-label{display:none;}
+    .announce{font-size:11.5px;padding:8px 10px;}
+  }
+  @media (max-width:520px){
+    .grid-4,.brand-grid,.loc-grid,.why-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:26px;}
+    .shop-banner{flex-direction:column;align-items:flex-start;}
+    .offer-card{width:200px;}
+    .fab-wa{width:52px;height:52px;right:16px;bottom:16px;}
+  }
+</style>
+</head>
+<body>
+
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <symbol id="ic-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
+    <symbol id="ic-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.015 4.85.071 1.17.055 1.805.249 2.227.415.56.217.96.477 1.38.896.42.42.68.819.9 1.381.163.422.36 1.057.413 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.17-.25 1.805-.413 2.227-.22.562-.48.96-.9 1.382-.42.419-.82.679-1.38.896-.422.164-1.057.36-2.227.413-1.267.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.053-1.805-.25-2.227-.413-.562-.217-.96-.477-1.38-.896-.42-.42-.68-.82-.9-1.382-.164-.422-.36-1.057-.413-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.17.25-1.805.413-2.227.22-.562.48-.96.9-1.381.42-.42.82-.68 1.38-.896.422-.166 1.057-.36 2.227-.415 1.267-.056 1.646-.071 4.85-.071M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
+    <symbol id="ic-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></symbol>
+    <symbol id="ic-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="ic-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="22,6 12,13 2,6"/></symbol>
+    <symbol id="ic-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle fill="none" stroke="currentColor" stroke-width="2" cx="12" cy="10" r="3"/></symbol>
+    <symbol id="ic-cart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" x1="3" y1="6" x2="21" y2="6"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="ic-snowflake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="4" y1="7" x2="20" y2="17"/><line x1="20" y1="7" x2="4" y2="17"/><path d="M12 2l-2 2M12 2l2 2M12 22l-2-2M12 22l2-2"/><path d="M4 7l.3 2.7M4 7l2.6-.8M20 17l-.3-2.7M20 17l-2.6.8"/><path d="M20 7l-2.6-.8M20 7l-.3 2.7M4 17l2.6.8M4 17l.3-2.7"/></g></symbol>
+    <symbol id="ic-washer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="14" r="5"/><circle cx="12" cy="14" r="2"/><line x1="7.5" y1="6" x2="9" y2="6"/><circle cx="16" cy="6" r="0.6" fill="currentColor"/></g></symbol>
+    <symbol id="ic-tv" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/></g></symbol>
+    <symbol id="ic-pan" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="13" r="7"/><line x1="16.5" y1="9" x2="22" y2="4"/><circle cx="8" cy="11" r="0.6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r="0.6" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="ic-fridge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="9" y1="4.5" x2="9" y2="7"/><line x1="9" y1="11.5" x2="9" y2="15"/></g></symbol>
+    <symbol id="ic-dishwasher" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="6" y1="7" x2="18" y2="7"/><circle cx="12" cy="14" r="4.5"/></g></symbol>
+    <symbol id="ic-droplet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 2.5C12 2.5 5.5 11 5.5 15.5a6.5 6.5 0 0 0 13 0C18.5 11 12 2.5 12 2.5z"/></symbol>
+    <symbol id="ic-shirt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 3 4 7l2.5 2.5L8 8v13h8V8l1.5 1.5L20 7l-4-4a4 4 0 0 1-8 0z"/></symbol>
+  </defs>
+</svg>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<div class="announce">🚚&nbsp; FREE DELIVERY &amp; INSTALLATION ON SELECT ITEMS — ALL OVER NEPAL &nbsp;|&nbsp; 100% AUTHENTIC PRODUCTS</div>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <img src="logo-transparent.png" alt="Kadel Trade Link logo">
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#categories">Products</a>
+      <a href="#brands">Brands</a>
+      <a href="#offers">Offers</a>
+      <a href="#locations">Showrooms</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;">
+      <div class="head-social">
+        <a href="https://www.facebook.com/kadeltradelink" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" style="font-size:16px"><use href="#ic-facebook"/></svg></a>
+        <a href="https://www.instagram.com/kadeltradelink/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" style="font-size:16px"><use href="#ic-instagram"/></svg></a>
+      </div>
+      <a class="nav-cta" href="https://api.whatsapp.com/send?phone=%2B9779854020334" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-whatsapp"/></svg> <span class="cta-label">WhatsApp Us</span></a>
+    </div>
+  </div>
+</header>
+
+<a class="fab-wa" href="https://api.whatsapp.com/send?phone=%2B9779854020334" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="icon" style="font-size:28px"><use href="#ic-whatsapp"/></svg></a>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow">Home Appliances · Electronics · Since 2020</span>
+      <h1>100% authentic appliances. Best brands. Delivered all over Nepal.</h1>
+      <p class="lead">Kadel Trade Link (KTL) is a Nepal-wide retailer and distributor of home appliances and consumer electronics — air conditioners, washing machines, refrigerators, TVs and kitchen appliances from brands you trust, backed by real after-sales support.</p>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="https://api.whatsapp.com/send?phone=%2B9779854020334" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-whatsapp"/></svg> Chat on WhatsApp</a>
+        <a class="btn btn-outline" href="#categories">Browse Products</a>
+      </div>
+    </div>
+    <div class="hero-logo-badge">
+      <img src="logo-transparent.png" alt="Kadel Trade Link logo">
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span>✅ 100% Authentic Products</span>
+    <span>🏆 Best Brands</span>
+    <span>🛠️ Top-Notch After-Sales Support</span>
+    <span>🚚 Delivering All Over Nepal</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="s-tag">Our Story</div>
+      <h2>Started in 2020 to fix a simple problem: too many fake appliances.</h2>
+      <p>When Mukesh Verma founded Kadel Trade Link in December 2020, the appliance market in Nepal was full of grey-market electronics with no real warranty and no one to call when something broke. KTL was built to be the opposite of that — a name customers could trust to sell only genuine, 100% authentic products.</p>
+      <p>Five years on, that same promise has grown into showrooms and regional touchpoints across six cities, nationwide delivery, and a brand lineup of global names like Hisense, Haier, Voltas and IFB — all backed by manufacturer warranties and spare parts support that doesn't disappear after checkout.</p>
+      <div class="about-stats">
+        <div class="stat"><b>2020</b><span>Founded by Mukesh Verma</span></div>
+        <div class="stat"><b>6+ Cities</b><span>Showrooms &amp; regional touchpoints</span></div>
+        <div class="stat"><b>10-Year</b><span>Compressor warranty on select units</span></div>
+        <div class="stat"><b>All-Nepal</b><span>Delivery &amp; installation</span></div>
+      </div>
+    </div>
+    <div class="about-panel">
+      <h3>Why customers choose KTL</h3>
+      <ul>
+        <li>100% authentic products — no grey-market imports</li>
+        <li>Free delivery and installation on select items</li>
+        <li>Long manufacturer and compressor warranties</li>
+        <li>Genuine spare parts, available long-term</li>
+        <li>Real after-sales support, not just a sale</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="s-tag">What We Sell</div>
+      <h2>Home &amp; kitchen appliances for every room</h2>
+      <p>A full range of cooling, laundry, entertainment and kitchen appliances from trusted brands.</p>
+    </div>
+
+    <div class="chip-scroll">
+      <a class="trend-chip" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20Air%20Conditioners" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-snowflake"/></svg> Air Conditioners</a>
+      <a class="trend-chip" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20Air%20Coolers" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-snowflake"/></svg> Air Coolers</a>
+      <a class="trend-chip" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20Washing%20Machines" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-washer"/></svg> Washing Machines</a>
+      <a class="trend-chip" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20Refrigerators" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-fridge"/></svg> Refrigerators</a>
+      <a class="trend-chip" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20TVs" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-tv"/></svg> TVs</a>
+      <a class="trend-chip" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20Dishwashers" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-dishwasher"/></svg> Dishwashers</a>
+      <a class="trend-chip" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20Water%20Dispensers" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-droplet"/></svg> Water Dispensers</a>
+      <a class="trend-chip" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20Irons" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-shirt"/></svg> Irons</a>
+    </div>
+
+    <div class="grid-4">
+      <a class="tile t1" href="#brands">
+        <span class="badge">Best Seller</span>
+        <span class="tile-icon"><svg class="icon" style="font-size:26px"><use href="#ic-snowflake"/></svg></span>
+        <h3>Air Conditioners &amp; Coolers</h3>
+        <p>Hot &amp; cold ACs, air coolers &amp; oil-filled radiators — Kenstar, Havells Lloyd, Hisense, Aisen, Voltas.</p>
+      </a>
+      <a class="tile t2" href="#brands">
+        <span class="badge">Popular</span>
+        <span class="tile-icon"><svg class="icon" style="font-size:26px"><use href="#ic-washer"/></svg></span>
+        <h3>Washing Machines &amp; Refrigerators</h3>
+        <p>Front-load washing machines &amp; convertible refrigerators — Havells Lloyd, Haier Super Drum.</p>
+      </a>
+      <a class="tile t3" href="#brands">
+        <span class="badge">New</span>
+        <span class="tile-icon"><svg class="icon" style="font-size:26px"><use href="#ic-tv"/></svg></span>
+        <h3>TVs &amp; Entertainment</h3>
+        <p>Hisense 4K Ultra HD Google TVs in 55", 65" &amp; 75" screen sizes.</p>
+      </a>
+      <a class="tile t4" href="#brands">
+        <span class="badge">Trending</span>
+        <span class="tile-icon"><svg class="icon" style="font-size:26px"><use href="#ic-pan"/></svg></span>
+        <h3>Kitchen &amp; Small Appliances</h3>
+        <p>IFB dishwashers, Havells steam irons, Voltas water dispensers &amp; more.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="brands">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="s-tag">Brands We Carry</div>
+      <h2>Authentic products from names you recognize</h2>
+    </div>
+    <div class="brand-grid">
+      <div class="brand-chip"><img src="brands/kenstar.png" alt="Kenstar logo"></div>
+      <div class="brand-chip"><img src="brands/havells.png" alt="Havells logo"><span class="sub-label">Lloyd</span></div>
+      <div class="brand-chip"><img src="brands/hisense.png" alt="Hisense logo"></div>
+      <div class="brand-chip"><img src="brands/aisen.png" alt="Aisen logo"></div>
+      <div class="brand-chip"><img src="brands/voltas.png" alt="Voltas logo"></div>
+      <div class="brand-chip"><img src="brands/haier.png" alt="Haier logo"></div>
+      <div class="brand-chip"><img src="brands/ifb.svg" alt="IFB logo"></div>
+      <div class="brand-chip"><img src="brands/havells.png" alt="Havells logo"></div>
+    </div>
+  </div>
+</section>
+
+<section id="offers">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="s-tag">Latest Offers</div>
+      <h2>Current deals &amp; new arrivals</h2>
+      <p>Swipe through what's in stock right now — tap any product to ask about price and availability.</p>
+    </div>
+    <div class="offers-scroll">
+      <div class="offer-card">
+        <img src="products/hisense-ac-offer.jpg" alt="Hisense 1 Ton AC offer — Rs. 52,000">
+        <a class="offer-cta" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20the%20Hisense%201%20Ton%20AC%20offer" target="_blank" rel="noopener"><svg class="icon" style="font-size:15px"><use href="#ic-whatsapp"/></svg> Ask on WhatsApp</a>
+      </div>
+      <div class="offer-card">
+        <img src="products/lloyd-washing-machine.jpg" alt="Lloyd by Havells washing machine — New Year offer">
+        <a class="offer-cta" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20the%20Lloyd%20Washing%20Machine%20offer" target="_blank" rel="noopener"><svg class="icon" style="font-size:15px"><use href="#ic-whatsapp"/></svg> Ask on WhatsApp</a>
+      </div>
+      <div class="offer-card">
+        <img src="products/haier-refrigerators.jpg" alt="Haier convertible refrigerators">
+        <a class="offer-cta" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20Haier%20Refrigerators" target="_blank" rel="noopener"><svg class="icon" style="font-size:15px"><use href="#ic-whatsapp"/></svg> Ask on WhatsApp</a>
+      </div>
+      <div class="offer-card">
+        <img src="products/lloyd-havells-ac.jpg" alt="Lloyd by Havells Hot and Cold AC — 10 year compressor warranty">
+        <a class="offer-cta" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20the%20Lloyd%20Hot%20%26%20Cold%20AC" target="_blank" rel="noopener"><svg class="icon" style="font-size:15px"><use href="#ic-whatsapp"/></svg> Ask on WhatsApp</a>
+      </div>
+      <div class="offer-card">
+        <img src="products/hisense-ac-energy-saving.jpg" alt="Hisense Inverter AC — 70% energy saving">
+        <a class="offer-cta" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20the%20Hisense%20Inverter%20AC" target="_blank" rel="noopener"><svg class="icon" style="font-size:15px"><use href="#ic-whatsapp"/></svg> Ask on WhatsApp</a>
+      </div>
+      <div class="offer-card">
+        <img src="products/voltas-water-heater-aquam.jpg" alt="Voltas 5-Star Water Heater Aqua M 25L">
+        <a class="offer-cta" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20the%20Voltas%20Aqua%20M%20Water%20Heater" target="_blank" rel="noopener"><svg class="icon" style="font-size:15px"><use href="#ic-whatsapp"/></svg> Ask on WhatsApp</a>
+      </div>
+      <div class="offer-card">
+        <img src="products/voltas-water-heater-magna.jpg" alt="Voltas 5-Star Water Heater Magna 15L">
+        <a class="offer-cta" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20the%20Voltas%20Magna%20Water%20Heater" target="_blank" rel="noopener"><svg class="icon" style="font-size:15px"><use href="#ic-whatsapp"/></svg> Ask on WhatsApp</a>
+      </div>
+      <div class="offer-card">
+        <img src="products/aisen-ofr-heater.jpg" alt="Aisen OFR room heater — 13 fins, 2900W">
+        <a class="offer-cta" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27m%20interested%20in%20the%20Aisen%20OFR%20Heater" target="_blank" rel="noopener"><svg class="icon" style="font-size:15px"><use href="#ic-whatsapp"/></svg> Ask on WhatsApp</a>
+      </div>
+      <div class="offer-card">
+        <img src="products/kenstar-ac.jpg" alt="Kenstar Hot and Cold Portable AC — coming soon to Nepal">
+        <a class="offer-cta" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20the%20Kenstar%20Portable%20AC" target="_blank" rel="noopener"><svg class="icon" style="font-size:15px"><use href="#ic-whatsapp"/></svg> Ask on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="locations">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="s-tag">Find Us</div>
+      <h2>Showrooms &amp; touchpoints across Nepal</h2>
+      <p>Visit us in person, or order online with delivery anywhere in Nepal.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-chip"><span class="dot"></span>Kathmandu</div>
+      <div class="loc-chip"><span class="dot"></span>Lalitpur</div>
+      <div class="loc-chip"><span class="dot"></span>Biratnagar</div>
+      <div class="loc-chip"><span class="dot"></span>Itahari</div>
+      <div class="loc-chip"><span class="dot"></span>Dharan</div>
+      <div class="loc-chip">
+        <span class="dot"></span>
+        <div>Janakpur<small>Thapa Chowk, by Sybar House</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="follow" style="background:var(--navy);color:#fff;padding:60px 0;">
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;">
+    <div>
+      <div class="s-tag">New Stock Drops First on Social</div>
+      <h2 style="color:#fff;font-size:24px;font-weight:800;">New arrivals, prices &amp; offers post on Facebook and Instagram before anywhere else.</h2>
+    </div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a class="btn btn-outline" href="https://www.facebook.com/kadeltradelink" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-facebook"/></svg> Follow on Facebook</a>
+      <a class="btn btn-gold" href="https://www.instagram.com/kadeltradelink/" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-instagram"/></svg> Follow on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="s-head">
+      <div class="s-tag">Service You Can Count On</div>
+      <h2>What you get with every purchase</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="num">01</div>
+        <h4>Delivery &amp; Installation</h4>
+        <p>All-Nepal delivery, with free delivery and installation available on select items.</p>
+      </div>
+      <div class="why-item">
+        <div class="num">02</div>
+        <h4>Long-Term Warranties</h4>
+        <p>Manufacturer warranties, including 10-year compressor warranties on select cooling units.</p>
+      </div>
+      <div class="why-item">
+        <div class="num">03</div>
+        <h4>Genuine Spare Parts</h4>
+        <p>Long-term availability of authentic spare parts for the products we sell.</p>
+      </div>
+      <div class="why-item">
+        <div class="num">04</div>
+        <h4>After-Sales Support</h4>
+        <p>Real customer support after the purchase, not just during it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="shop-banner">
+      <div>
+        <h3>Prefer to shop online?</h3>
+        <p>Browse and order Kadel Trade Link products on Daraz, Nepal's leading online marketplace.</p>
+      </div>
+      <a class="btn btn-daraz" href="https://www.daraz.com.np/kadel-tradelink" target="_blank" rel="noopener">Shop on Daraz →</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <div class="s-tag">Get In Touch</div>
+      <h2>Have a product in mind?</h2>
+      <p>Reach out for pricing, availability, delivery timelines or after-sales support — we're quickest to respond on WhatsApp.</p>
+
+      <div class="info-row">
+        <div class="ic"><svg class="icon" style="font-size:19px"><use href="#ic-pin"/></svg></div>
+        <div><b>Location</b><span>Nepal — showrooms in Kathmandu, Lalitpur, Biratnagar, Itahari, Dharan &amp; Janakpur</span></div>
+      </div>
+      <div class="info-row">
+        <div class="ic"><svg class="icon" style="font-size:19px"><use href="#ic-phone"/></svg></div>
+        <div><b>Phone / WhatsApp</b><span>+977 985 402 0334 &nbsp;|&nbsp; +977 980 100 5686</span></div>
+      </div>
+      <div class="info-row">
+        <div class="ic"><svg class="icon" style="font-size:19px"><use href="#ic-mail"/></svg></div>
+        <div><b>Email</b><span><a class="link" href="mailto:kadeltradelink@gmail.com">kadeltradelink@gmail.com</a></span></div>
+      </div>
+      <div class="info-row">
+        <div class="ic"><svg class="icon" style="font-size:19px"><use href="#ic-cart"/></svg></div>
+        <div><b>Shop Online</b><span><a class="link" href="https://www.daraz.com.np/kadel-tradelink" target="_blank" rel="noopener">daraz.com.np/kadel-tradelink</a></span></div>
+      </div>
+
+      <div class="social-row">
+        <a class="wa" href="https://api.whatsapp.com/send?phone=%2B9779854020334" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon" style="font-size:17px"><use href="#ic-whatsapp"/></svg></a>
+        <a href="https://www.facebook.com/kadeltradelink" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" style="font-size:17px"><use href="#ic-facebook"/></svg></a>
+        <a href="https://www.instagram.com/kadeltradelink/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" style="font-size:17px"><use href="#ic-instagram"/></svg></a>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h3>Talk to us directly</h3>
+      <p>Pick whichever is easiest — we're active on all of these.</p>
+      <div class="cta-stack">
+        <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=%2B9779854020334" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-whatsapp"/></svg> Message on WhatsApp</a>
+        <a class="btn btn-navy" href="tel:+9779854020334"><svg class="icon" style="font-size:16px"><use href="#ic-phone"/></svg> Call +977 985 402 0334</a>
+        <a class="btn btn-navy" href="mailto:kadeltradelink@gmail.com"><svg class="icon" style="font-size:16px"><use href="#ic-mail"/></svg> Email Us</a>
+        <a class="btn btn-daraz" href="https://www.daraz.com.np/kadel-tradelink" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-cart"/></svg> Shop on Daraz</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="trust-row">
+      <div class="trust-item"><span class="em">✅</span>100% Authentic</div>
+      <div class="trust-item"><span class="em">🛠️</span>Warranty Backed</div>
+      <div class="trust-item"><span class="em">🚚</span>Nationwide Delivery</div>
+      <div class="trust-item"><span class="em"><svg class="icon" style="font-size:22px"><use href="#ic-phone"/></svg></span>After-Sales Support</div>
+    </div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="logo-transparent.png" alt="Kadel Trade Link">
+      </div>
+      <nav class="fnav">
+        <a href="#about">About</a>
+        <a href="#categories">Products</a>
+        <a href="#brands">Brands</a>
+        <a href="#offers">Offers</a>
+        <a href="#locations">Showrooms</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="social-row">
+        <a class="wa" href="https://api.whatsapp.com/send?phone=%2B9779854020334" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon" style="font-size:17px"><use href="#ic-whatsapp"/></svg></a>
+        <a href="https://www.facebook.com/kadeltradelink" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" style="font-size:17px"><use href="#ic-facebook"/></svg></a>
+        <a href="https://www.instagram.com/kadeltradelink/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" style="font-size:17px"><use href="#ic-instagram"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> Kadel Trade Link (KTL). All rights reserved. 100% Authentic Products | Delivering All Over Nepal.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const bar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    bar.style.width = scrolled + '%';
+  });
+</script>
+</body>
+</html>
