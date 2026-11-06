@@ -8,7 +8,7 @@
 <link rel="icon" href="logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#162868;
@@ -30,6 +30,7 @@
     background:var(--white);
     line-height:1.6;
   }
+  h1,h2,h3,h4{font-family:'Archivo Black','Poppins','Helvetica Neue',Arial,sans-serif;font-weight:900;}
   img{max-width:100%;display:block;}
   a{text-decoration:none;color:inherit;}
   ul{list-style:none;}
@@ -140,22 +141,6 @@
   .s-tag{color:var(--gold);font-weight:700;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
   .s-head h2{font-size:32px;font-weight:800;color:var(--navy-dark);margin-bottom:14px;}
   .s-head p{color:var(--gray);font-size:16px;}
-
-  /* ABOUT */
-  #about{background:var(--bg);}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-  .about-grid h2{font-size:30px;font-weight:800;color:var(--navy-dark);margin-bottom:18px;}
-  .about-grid p{color:var(--gray);margin-bottom:16px;font-size:16px;}
-  .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px;}
-  .stat{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:20px;}
-  .stat b{display:block;font-size:24px;color:var(--navy);font-weight:800;}
-  .stat span{font-size:13px;color:var(--gray);}
-  .about-panel{
-    background:var(--navy);color:var(--white);border-radius:12px;padding:40px;
-  }
-  .about-panel h3{font-size:20px;margin-bottom:18px;color:var(--gold);font-weight:700;}
-  .about-panel ul li{display:flex;gap:12px;margin-bottom:14px;font-size:15px;color:#e5e8f6;}
-  .about-panel ul li::before{content:"✓";color:var(--gold);font-weight:800;}
 
   /* TRENDING CHIPS */
   .chip-scroll{
@@ -336,7 +321,7 @@
   @media (max-width:860px){
     .nav-links{display:none;}
     .hero h1{font-size:30px;}
-    .about-grid,.contact-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
     .grid-4{grid-template-columns:1fr 1fr;}
     .brand-grid{grid-template-columns:1fr 1fr;}
     .loc-grid{grid-template-columns:1fr 1fr;}
@@ -393,7 +378,6 @@
       <img src="logo-transparent.png" alt="Kadel Trade Link logo">
     </a>
     <nav class="nav-links">
-      <a href="#about">About</a>
       <a href="#categories">Products</a>
       <a href="#brands">Brands</a>
       <a href="#offers">Offers</a>
@@ -437,33 +421,6 @@
     <span>🚚 Delivering All Over Nepal</span>
   </div>
 </div>
-
-<section id="about">
-  <div class="wrap about-grid">
-    <div>
-      <div class="s-tag">Our Story</div>
-      <h2>Started in 2020 to fix a simple problem: too many fake appliances.</h2>
-      <p>When Mukesh Verma founded Kadel Trade Link in December 2020, the appliance market in Nepal was full of grey-market electronics with no real warranty and no one to call when something broke. KTL was built to be the opposite of that — a name customers could trust to sell only genuine, 100% authentic products.</p>
-      <p>Five years on, that same promise has grown into showrooms and regional touchpoints across six cities, nationwide delivery, and a brand lineup of global names like Hisense, Haier, Voltas and IFB — all backed by manufacturer warranties and spare parts support that doesn't disappear after checkout.</p>
-      <div class="about-stats">
-        <div class="stat"><b>2020</b><span>Founded by Mukesh Verma</span></div>
-        <div class="stat"><b>6+ Cities</b><span>Showrooms &amp; regional touchpoints</span></div>
-        <div class="stat"><b>10-Year</b><span>Compressor warranty on select units</span></div>
-        <div class="stat"><b>All-Nepal</b><span>Delivery &amp; installation</span></div>
-      </div>
-    </div>
-    <div class="about-panel">
-      <h3>Why customers choose KTL</h3>
-      <ul>
-        <li>100% authentic products — no grey-market imports</li>
-        <li>Free delivery and installation on select items</li>
-        <li>Long manufacturer and compressor warranties</li>
-        <li>Genuine spare parts, available long-term</li>
-        <li>Real after-sales support, not just a sale</li>
-      </ul>
-    </div>
-  </div>
-</section>
 
 <section id="categories">
   <div class="wrap">
@@ -714,7 +671,6 @@
         <img src="logo-transparent.png" alt="Kadel Trade Link">
       </div>
       <nav class="fnav">
-        <a href="#about">About</a>
         <a href="#categories">Products</a>
         <a href="#brands">Brands</a>
         <a href="#offers">Offers</a>
