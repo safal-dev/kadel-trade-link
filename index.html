@@ -259,6 +259,19 @@
   @media (max-width:980px){.hero-logo-badge{display:none;}}
 
   /* LOCATIONS */
+  .showroom-feature{
+    background:linear-gradient(135deg,#1f3584,var(--navy));color:#fff;border-radius:16px;
+    padding:36px 40px;margin-bottom:40px;display:flex;justify-content:space-between;align-items:center;
+    gap:24px;flex-wrap:wrap;
+  }
+  .showroom-feature .sf-badge{
+    display:inline-block;background:rgba(199,154,62,.2);border:1px solid rgba(199,154,62,.5);
+    color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;
+    padding:5px 12px;border-radius:20px;margin-bottom:12px;
+  }
+  .showroom-feature h3{font-size:22px;font-weight:900;margin-bottom:6px;}
+  .showroom-feature p{color:#d7dcf2;font-size:14.5px;}
+  .partner-note{text-align:center;max-width:640px;margin:0 auto 28px;color:var(--gray);font-size:14.5px;}
   .loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
   .loc-chip{
     background:var(--white);border:1px solid var(--line);border-radius:10px;padding:22px;
@@ -602,19 +615,26 @@
   <div class="wrap">
     <div class="s-head">
       <div class="s-tag">Find Us</div>
-      <h2>Showrooms &amp; touchpoints across Nepal</h2>
-      <p>Visit us in person, or order online with delivery anywhere in Nepal.</p>
+      <h2>Our showroom, and a nationwide network</h2>
+      <p>Business presence across Nepal via trade partners and warehouse chains.</p>
     </div>
+
+    <div class="showroom-feature">
+      <div>
+        <span class="sf-badge">Exclusive 3S Showroom</span>
+        <h3>Janakpur — Sales, Service &amp; Spares, all under one roof</h3>
+        <p>Thapa Chowk, by Sybar House · Opened 2026</p>
+      </div>
+      <a class="btn btn-gold" href="https://api.whatsapp.com/send?phone=%2B9779854020334&text=Hi%2C%20I%27d%20like%20directions%20to%20the%20Janakpur%20showroom" target="_blank" rel="noopener"><svg class="icon" style="font-size:16px"><use href="#ic-whatsapp"/></svg> Get Directions</a>
+    </div>
+
+    <p class="partner-note">Beyond Janakpur, KTL also reaches customers through trade partners and warehouse chains in the cities below — operating under their own local names.</p>
     <div class="loc-grid">
       <div class="loc-chip"><span class="dot"></span>Kathmandu</div>
       <div class="loc-chip"><span class="dot"></span>Lalitpur</div>
       <div class="loc-chip"><span class="dot"></span>Biratnagar</div>
       <div class="loc-chip"><span class="dot"></span>Itahari</div>
       <div class="loc-chip"><span class="dot"></span>Dharan</div>
-      <div class="loc-chip">
-        <span class="dot"></span>
-        <div>Janakpur<small>Thapa Chowk, by Sybar House</small></div>
-      </div>
     </div>
   </div>
 </section>
@@ -684,7 +704,7 @@
 
       <div class="info-row">
         <div class="ic"><svg class="icon" style="font-size:19px"><use href="#ic-pin"/></svg></div>
-        <div><b>Location</b><span>Nepal — showrooms in Kathmandu, Lalitpur, Biratnagar, Itahari, Dharan &amp; Janakpur</span></div>
+        <div><b>Location</b><span>Exclusive 3S showroom in Janakpur · Trade partner network across Kathmandu, Lalitpur, Biratnagar, Itahari &amp; Dharan</span></div>
       </div>
       <div class="info-row">
         <div class="ic"><svg class="icon" style="font-size:19px"><use href="#ic-phone"/></svg></div>
